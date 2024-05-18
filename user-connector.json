@@ -1,0 +1,21 @@
+{
+    "name": "inventory-connector",  
+    "config": {  
+      "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+      "tasks.max": "1",  
+      "database.hostname": "localhost",  
+      "database.port": "3306",
+      "database.user": "root",
+      "database.password": "root",
+      "database.server.id": "184054",  
+      "database.exclude.list": "editor,example-db,information_schema,mysql,performance_schema,sys,metabase",
+      "topic.prefix": "inventory",
+      "topic.creation.enable": true,
+      "topic.creation.default.replication.factor": -1,  
+      "topic.creation.default.partitions": -1,  
+      "topic.creation.default.cleanup.policy": "compact",  
+      "topic.creation.default.compression.type": "lz4" , 
+      "schema.history.internal.kafka.bootstrap.servers": "localhost:9092",  
+      "schema.history.internal.kafka.topic": "schema-changes.inventory"  
+    }
+  }

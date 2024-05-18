@@ -18,7 +18,10 @@ services:
       KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS: http://kafka0:8083
   
   kafka0:
-    image: kafka-test:1.1
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    # image: kafka-test:1.1
     hostname: kafka0
     container_name: kafka0
     ports:
